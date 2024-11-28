@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1 - M15.5 - SCAMPER</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }     
+        .activity { margin-bottom: 30px; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1 - M15.5 - SCAMPER</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Reproduce la DIAPOSITIVA 1 para revisar la lista de materiales que tienes que tener listos para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Saluda a los niños e introduce la misión.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 2 "Code Squad" y saluda a los niños mientras introduces el tema del día.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, genios del CODE SQUAD! Hoy tenemos una misión súper especial: ayudaremos a Diego, un artesano de San Andrés Cholula, a descubrir formas de adaptar los papalotes para que tengan otros usos además de volar por diversión. ¿Listos para aprender cómo hacerlo con la letra ‘A’ de Adaptar?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+<!-- Actividad 2 -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('baile_scamper')">
+        <div class="title">💃 Actividad 2: Baile de SCAMPER ⏰ Tiempo: 2 minutos</div>
+        <div class="subtitle">Guía a los niños con estos pasos para aplicar SCAMPER al baile.</div>
+    </div>
+    <div id="baile_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 3 "Canción SCAMPER" y guía a los niños y guíalos con estos pasos para aplicar SCAMPER al baile:
+                    <ul>
+                        <li><strong>Paso Inicial</strong> (Derecha, derecha, izquierda, izquierda): Comienza con un paso lateral básico, dos pasos a la derecha y dos a la izquierda.</li>
+                        <li><strong>Sustituir</strong> (Adelante, adelante, atrás, atrás): Cambias los pasos laterales por dos pasos adelante y dos atrás.</li>
+                        <li><strong>Combinar</strong> (Derecha adelante, izquierda atrás): Combinas los movimientos alternando un paso adelante con la derecha y uno atrás con la izquierda.</li>
+                        <li><strong>Adaptar</strong> (Pasos pequeños): Sigues con los pasos combinados, pero ahora los haces pequeños, casi como saltitos.</li>
+                        <li><strong>Proponer</strong> (Movimiento libre con las manos): Mantienes los pasos pequeños, pero ahora los niños pueden añadir movimientos libres con las manos, como quieran.</li>
+                        <li><strong>Eliminar</strong> (Solo pasos pequeños): Eliminas los movimientos de manos y vuelves a hacer solo los pasos pequeños hacia adelante y atrás.</li>
+                        <li><strong>Reorganizar</strong> (Izquierda adelante, derecha atrás): Inviertes la combinación, comenzando con izquierda adelante y derecha atrás.</li>
+                    </ul>
+                </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Síganme para que aprendamos a bailar al estilo SCAMPER. No se preocupen si la primera vez no pueden seguir todo lo que dice la canción, para eso es esta canción, para irnos ejercitando y que cada día sea más fácil.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 3 -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('planteamiento_problema')">
+        <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 1.5 minutos</div>
+        <div class="subtitle">Introduce el video de las artesanías con las que van a trabajar y explica el reto.</div>
+    </div>
+    <div id="planteamiento_problema" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 4 "Desafío de Innovación" e introduce la historia de Diego y su desafío de adaptar los papalotes.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy ayudaremos a Diego, un artesano de San Andrés Cholula, Puebla, que hace papalotes increíbles con papel amate. Diego quiere adaptar sus papalotes para que puedan tener nuevos usos, como ayudar en los campos o llevar mensajes en festivales. ¿Listos para conocer su historia y ayudarlo?</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 5 y plantea preguntas para que los niños comprendan el reto.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Muy bien, genios, antes de empezar, repasemos: <br>
+¿De dónde creen que es Diego, el artesano que hace los papalotes? (Esperar respuestas). <br>
+¡Exacto, es de San Andrés Cholula, Puebla! Ahora, ¿recuerdan de qué material hace sus papalotes? (Esperar respuestas). <br>
+¡Correcto, usa papel amate! Por último, ¿qué usos creen que podría tener un papalote además de volar por diversión? (Esperar respuestas). <br>
+¡Eso es, pueden servir para ayudar en los campos o transmitir mensajes en festivales! <br>
+¡Vamos a pensar cómo podemos ayudar a Diego con su reto!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 4 -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('introduccion_scamper')">
+        <div class="title">🧠 Actividad 4: Introducción a la metodología SCAMPER ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Explica cómo hacer preguntas de innovación con "Sustituir".</div>
+    </div>
+    <div id="introduccion_scamper" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 6 "A de Adaptar" y presenta la idea de adaptar los papalotes tradicionales.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, hoy aprenderemos la palabra mágica ‘Adaptar’. Adaptar significa cambiar algo para que sirva en una situación diferente o tenga un nuevo propósito. ¿Qué tal si pensamos cómo podríamos usar un papalote para algo más que volar? ¡Vamos a descubrirlo juntos con la letra ‘A’ de SCAMPER!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 5 -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('metodologia_qtf')">
+        <div class="title">❓ Actividad 5: Metodología QTF ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta el estímulo para hacer preguntas utilizando SCAMPER.</div>
+    </div>
+    <div id="metodologia_qtf" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 7 "Paso 1 Metodología QTF" y presenta el estímulo para hacer preguntas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Recuerdan lo que aprendimos de Diego? Hoy vamos a usar nuestra creatividad para ayudarlo a adaptar sus papalotes. Para eso, aprenderemos a hacernos preguntas que nos ayuden a imaginar nuevas posibilidades. ¡Vamos a empezar!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 8 "Fórmula Preguntas" y explica la fórmula para innovar en el uso del papalote. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> La fórmula de hoy es: ‘¿Cómo podríamos adaptar el papalote para que se use como [propósito específico]?’ Por ejemplo, ¿cómo podríamos adaptarlo para que se use en un campo, en una escuela o en un festival? ¡Pensemos en muchas posibilidades y dejemos volar nuestra imaginación!</td>
+            </tr>
+<!-- Paso 3 -->
+<tr>
+    <td><strong>PASO 3 (3 minutos):</strong> Reproduce la Diapositiva 9 "Formulación de Preguntas" y guía a los niños en la creación de preguntas iniciales sobre adaptación del uso del papalote. Anota sus ideas en el pizarrón.</td>
+    <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, ahora que conocemos la fórmula, ¡vamos a hacer preguntas creativas para imaginar nuevos usos de los papalotes! Piensen en situaciones diferentes: ¿cómo podrían usarse en un campo, en una escuela o en un festival? ¿Qué problemas podrían resolver? ¡Escribamos nuestras ideas en el pizarrón y sigamos explorando juntos!</td>
+</tr>
+
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (1 minuto):</strong> Reproduce la Diapositiva 10 "Mejorar Preguntas" y explica cómo hacer las preguntas más específicas. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Genios, ahora vamos a hacer nuestras preguntas más claras y enfocadas. Por ejemplo, en lugar de preguntar ‘¿Cómo usamos el papalote en un campo?’, podríamos decir: ‘¿Cómo podríamos usar el papalote para ayudar a los agricultores a proteger sus cultivos?’ ¡Hagamos nuestras preguntas más claras para que podamos avanzar mejor!</td>
+            </tr>
+            <!-- Paso 5 -->
+            <tr>
+                <td><strong>PASO 5 (3 minutos):</strong> Reproduce la Diapositiva 11 "Ejemplo Pregunta Específica" y facilita el proceso para que los niños mejoren sus preguntas. Anota las nuevas preguntas en el pizarrón. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Ahora vamos a hacer nuestras preguntas más específicas! Por ejemplo, si queremos usar el papalote en un campo, podríamos preguntar: ‘¿Cómo diseñaríamos un papalote que ayude a espantar aves sin dañar el medio ambiente?’ ¡Hagamos nuestras preguntas lo más detalladas posible para que sean súper útiles!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 6 -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('prototipado_esferas')">
+        <div class="title">🖍️ Actividad 6: Prototipado en Papel de Papalotes ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Aplica las preguntas formuladas en el diseño de la esfera.</div>
+    </div>
+    <div id="prototipado_esferas" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 12 "Entregar Materiales" y distribuye papel, colores y materiales de diseño.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Aquí tienen sus materiales, genios. Con estos, van a crear su papalote adaptado. ¿Qué colores, formas o patrones usarán para que cumpla con el nuevo uso que imaginaron? ¡Sean muy creativos!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 13 "Diseñar Papalote" y guía a los niños en el diseño paso a paso, basándose en las ideas desarrolladas en los pasos anteriores.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Ahora es el momento de plasmar sus ideas! ¿Cómo será el diseño de su papalote adaptado? ¿Qué forma tendrá? ¿Qué mensajes o elementos incluirá para cumplir su nuevo propósito? ¡Pónganlo todo en su diseño y vamos a ver qué se les ocurre!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 7 -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_tecnologia')">
+        <div class="title">💡 Actividad 7: Presentación de Tecnología ⏰ Tiempo: Variable</div>
+        <div class="subtitle">Presenta la adición de tecnología al reto.</div>
+    </div>
+    <div id="presentacion_tecnologia" class="content">
+        <table>
+            <!-- Paso 1 -->
+            <tr>
+                <td><strong>PASO 1 (2 minutos):</strong> Reproduce la Diapositiva 14 "Presentación de Tecnología" y presenta la mini cámara liviana. </td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios del CODE SQUAD! Hoy les traemos una tecnología increíble: ¡las mini cámaras livianas! Estas cámaras son pequeñas y ligeras, perfectas para colocarlas en un papalote y capturar imágenes desde el cielo. ¡Vamos a ver cómo funcionan!</td>
+            </tr>
+            <!-- Paso 2 -->
+            <tr>
+                <td><strong>PASO 2 (2 minutos):</strong> Reproduce la Diapositiva 15 "Video de Mini Cámara Liviana" y facilita preguntas al final para asegurar la comprensión.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¿Qué les pareció, genios? ¿Recuerdan para qué podemos usar estas cámaras? (Esperar respuestas). ¡Así es, podemos usarlas para capturar imágenes de un campo o una ciudad desde el cielo y aprender mucho más del mundo!</td>
+            </tr>
+            <!-- Paso 3 -->
+            <tr>
+                <td><strong>PASO 3 (1 minuto):</strong> Reproduce la Diapositiva 16 "Ejemplo de Uso en Papalotes" y muestra cómo la mini cámara podría integrarse en los diseños.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Miren estos ejemplos de cómo las mini cámaras pueden grabar desde el aire. ¿Ven cómo podríamos usarlas en nuestros papalotes para aprender o ayudar en un campo o en un festival? ¡Es impresionante lo que podemos hacer!</td>
+            </tr>
+            <!-- Paso 4 -->
+            <tr>
+                <td><strong>PASO 4 (5-8 minutos):</strong> Reproduce la Diapositiva 17 "Integración de Tecnología" y guía a los niños para imaginar cómo integrar la mini cámara en sus diseños.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora, genios, imaginen que su papalote tiene una mini cámara. ¿Dónde la colocarían? ¿Cómo podrían usarla para cumplir el propósito que diseñaron? ¡Piensen en todas las posibilidades y agreguen esta idea a su diseño!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 8 -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('presentacion_esferas')">
+        <div class="title">🎨 Actividad 8: Presentación de Papalotes ⏰ Tiempo: 3 minutos</div>
+        <div class="subtitle">Organiza la presentación de las esferas en grupos de 3.</div>
+    </div>
+    <div id="presentacion_esferas" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (3 minutos):</strong> Reproduce la Diapositiva 18 "Presentación de Diseños" y organiza a los niños en grupos de 3 para que presenten sus ideas.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡CODE SQUAD, es momento de compartir sus increíbles diseños de papalotes! Preséntense en grupos de tres y expliquen cómo adaptaron su papalote, qué uso le dieron y cómo integraron la mini cámara. ¡Vamos a escuchar todas sus ideas geniales!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Actividad 9 -->
+<div id="activity-9" class="activity">
+    <div class="banner" onclick="toggleContent('conclusion_historia')">
+        <div class="title">🏁 Actividad 9: Conclusión de la Historia y Reflexión ⏰ Tiempo: 1 minuto</div>
+        <div class="subtitle">Felicita al CODE SQUAD por su trabajo.</div>
+    </div>
+    <div id="conclusion_historia" class="content">
+        <table>
+            <tr>
+                <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 19 "Conclusión y Cierre" y felicita a los niños por su creatividad.</td>
+                <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Genios, hicieron un trabajo espectacular! Diego está emocionado con sus ideas para adaptar los papalotes y llevarlos a nuevos usos. Ahora, más personas podrán disfrutar y aprovechar estas creaciones únicas gracias a ustedes. ¡Nos vemos en la próxima misión del CODE SQUAD!</td>
+            </tr>
+        </table>
+    </div>
+</div>
+  
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+
+            // Filtrar pasos con tiempo 0 según el tiempo seleccionado
+            var activities = document.querySelectorAll('.activity');
+            activities.forEach(function(activity) {
+                var steps = activity.querySelectorAll('tr');
+                steps.forEach(function(step) {
+                    var stepTime = parseInt(step.getAttribute('data-time-' + time), 10);
+                    if (stepTime === 0) {
+                        step.style.display = 'none';
+                    } else {
+                        step.style.display = 'table-row';
+                    }
+                });
+            });
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
